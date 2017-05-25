@@ -1,0 +1,17 @@
+D:\Git\Test\miniCRM\miniCRM.Data\bin\Debug\miniCRM.Data.dll.config
+D:\Git\Test\miniCRM\miniCRM.Data\bin\Debug\miniCRM.Data.dll
+D:\Git\Test\miniCRM\miniCRM.Data\bin\Debug\miniCRM.Data.pdb
+D:\Git\Test\miniCRM\miniCRM.Data\bin\Debug\EntityFramework.dll
+D:\Git\Test\miniCRM\miniCRM.Data\bin\Debug\EntityFramework.SqlServer.dll
+D:\Git\Test\miniCRM\miniCRM.Data\bin\Debug\EntityFramework.xml
+D:\Git\Test\miniCRM\miniCRM.Data\bin\Debug\EntityFramework.SqlServer.xml
+D:\Git\Test\miniCRM\miniCRM.Data\bin\Debug\ru\EntityFramework.resources.dll
+D:\Git\Test\miniCRM\miniCRM.Data\obj\Debug\miniCRM.Data.csprojResolveAssemblyReference.cache
+D:\Git\Test\miniCRM\miniCRM.Data\obj\Debug\miniCRM.Data.dll
+D:\Git\Test\miniCRM\miniCRM.Data\obj\Debug\miniCRM.Data.pdb
+D:\Git\Test\miniCRM\miniCRM.Data\obj\Debug\miniCRM.Data.Migrations.Initial.resources
+D:\Git\Test\miniCRM\miniCRM.Data\obj\Debug\miniCRM.Data.csproj.GenerateResource.Cache
+D:\Git\Test\miniCRM\miniCRM.Data\obj\Debug\miniCRM.Data.Migrations.Initial2.resources
+D:\Git\Test\miniCRM\miniCRM.Data\obj\Debug\miniCRM.Data.Migrations.Initial3.resources
+D:\Git\Test\miniCRM\miniCRM.Data\bin\Debug\ru\EntityFramework.SqlServer.resources.dll
+D:\Git\Test\miniCRM\miniCRM.Data\obj\Debug\miniCRM.Data.Migrations.Initial5.resources

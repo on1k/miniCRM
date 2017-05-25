@@ -1,0 +1,43 @@
+﻿@model IEnumerable<miniCRM.Data.Entities.Act>
+@{
+    ViewBag.Title = "Акты потребления электроэнергии";
+}
+
+<h2>Index</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Номер акта</th>
+            <th>Компания</th>
+            <th>Счетчик</th>
+            <th>Дата</th>
+            <th>Начальные показания</th>
+            <th>Конечные</th>
+            <th>Итого</th>
+            <th>Ставка</th>
+            <th>Сумма</th>
+        </tr>
+    </thead>
+    <tbody>
+       
+            @foreach (var item in Model)
+            {
+
+               
+                <tr>
+                    <td>@item.NumberAct</td>
+                    <td>@item.Company.Name</td>
+                    <td>@item.ElectricMeter.SerialNumber</td>
+                    <td>@item.ActualDate</td>
+                    <td>@item.StartMeter</td>
+                    <td>@item.EndMeter</td>
+                    <td>@(item.EndMeter - item.StartMeter)</td>
+                    <td>@item.Bid.Value</td>
+                    <td>@{var sum = (item.EndMeter - item.StartMeter) * item.Bid.Value;} @sum.ToString("c")</td>
+                </tr>
+                    }
+                
+    </tbody>
+
+</table>
