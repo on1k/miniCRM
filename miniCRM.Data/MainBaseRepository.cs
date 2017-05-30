@@ -36,12 +36,12 @@ namespace miniCRM.Data
             dbEntry.State = EntityState.Modified;
         }
 
-        public IEnumerable<T> GetAll()
+        public IQueryable<T> GetAll()
         {
            return db.Set<T>();
         }
 
-        public T GetOne(int id)
+        public T GetOne(int? id)
         {
             return db.Set<T>().Find(id);
         }

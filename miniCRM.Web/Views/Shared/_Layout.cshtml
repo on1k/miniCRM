@@ -7,6 +7,8 @@
     <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <link href="~/Content/themes/base/jquery-ui.css" rel="stylesheet" />
+
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -16,7 +18,20 @@
             </div>
         </div>
     </div>
-
+    <div class="col-md-2">
+        <div class="sidebar-nav">
+            <ul class="nav nav-list">
+                <li class="nav-header">Меню</li>
+                <li>@Html.ActionLink("Компании", "Index", "Company", new { area = "" }, new { @class = "glyphicon-home" })</li>
+                <li>@Html.ActionLink("Счетчики", "Index", "Meter", new { area = "" }, new { @class = "glyphicon-film" })</li>
+                <li><a href="#"><i class="glyphicon-film"></i> Comments <span class="badge badge-info">10</span></a></li>
+                <li class="active"><a href="#"><i class="icon-user"></i> Members</a></li>
+                <li class="divider"></li>
+                <li><a href="#"><i class="icon-comment"></i> Settings</a></li>
+                <li><a href="#"><i class="icon-share"></i> Logout</a></li>
+            </ul>
+        </div>
+    </div>
     <div class="container body-content">
         @RenderBody()
         <hr />
@@ -24,8 +39,40 @@
             <p>&copy; @DateTime.Now.Year - Created by Yan Peshakov</p>
         </footer>
     </div>
+    <script type="text/javascript">
+    $(function () {
+        if (!Modernizr.inputtypes.date) {
+            $(function () {
+                $("input[type='date']")
+                    .datepicker({ dateFormat: 'dd/mm/yy' })
+                    .get(0).setAttribute("type", "text");
+                });
+                $.datepicker.regional['ru'] = {
+                    closeText: 'Закрыть',
+                    prevText: 'Пред',
+                    nextText: 'След',
+                    currentText: 'Сегодня',
+                    monthNames: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь',
+                    'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
+                    monthNamesShort: ['Янв', 'Фев', 'Мар', 'Апр', 'Май', 'Июн',
+                    'Июл', 'Авг', 'Сен', 'Окт', 'Ноя', 'Дек'],
+                    dayNames: ['воскресенье', 'понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота'],
+                    dayNamesShort: ['вск', 'пнд', 'втр', 'срд', 'чтв', 'птн', 'сбт'],
+                    dayNamesMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
+                    weekHeader: 'Не',
+                    dateFormat: 'dd.mm.yy',
+                    firstDay: 1,
+                    isRTL: false,
+                    showMonthAfterYear: false,
+                    yearSuffix: ''
+                };
+         $.datepicker.setDefaults($.datepicker.regional['ru']);
 
+        }
+    });
+    </script>
     <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/jquery-ui-1.12.1.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
 </body>
 </html>

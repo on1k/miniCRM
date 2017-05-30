@@ -1,0 +1,30 @@
+﻿@model IQueryable<miniCRM.Data.Entities.Company>
+@{
+    ViewBag.Title = "Companies";
+}
+
+<h2>Компании</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Название организации</th>
+            <th>ФИО Сотрудника</th>
+            <th>С/Н Счетчика</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tboby>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.EmployeName</td>
+                <td>@item.ElectricMeter.SerialNumber</td>
+                <td><a href="@Url.Action("Edit", "Company")"> <button class="btn btn-primary">Править</button> </a> | 
+                    <a href="@Url.Action("Delete", "Company")"> <button class="btn btn-primary">Удалить</button> </a> </td>
+            </tr>
+        }
+    </tboby>
+</table>
+

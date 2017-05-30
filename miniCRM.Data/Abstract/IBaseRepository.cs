@@ -8,11 +8,12 @@ namespace miniCRM.Data.Abstract
 {
     public interface IBaseRepository<T> where T : class
     {
-        IEnumerable<T> GetAll();
-        T GetOne(int id);
+        IQueryable<T> GetAll();
+        T GetOne(int? id);
         void Add(T entity);
         void Edit(T entity);
         void Delete(T entity);
         void Save();
+        
     }
 }

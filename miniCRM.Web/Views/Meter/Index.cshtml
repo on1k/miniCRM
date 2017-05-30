@@ -1,0 +1,37 @@
+﻿@model IQueryable<miniCRM.Data.Entities.ElectricMeter>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Счетчики</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Модель</th>
+            <th>Серийный номер</th>
+            <th>Дата окончания экспуатации</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tboby>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.ModelName</td>
+                <td>@item.SerialNumber</td>
+                <td>@item.ExpDate</td>
+                <td>
+                    <a href="@Url.Action("Edit", "Meter")"> <button class="btn btn-primary">Править</button> </a> |
+                    <a href="@Url.Action("Delete", "Meter")"> <button class="btn btn-primary">Удалить</button> </a>
+                </td>
+            </tr>
+        }
+    </tboby>
+</table>
+
+<div class="form-group">
+    <div class="col-md-offset-2 col-md-10">
+        <a href="@Url.Action("Create", "Meter")"> <button class="btn btn-success">Добавить счетчик</button> </a>
+    </div>
+</div>

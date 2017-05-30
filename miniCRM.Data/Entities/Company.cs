@@ -9,7 +9,7 @@ namespace miniCRM.Data.Entities
     public class Company
     {
         public int CompanyID { get; set; }
-        public ElectricMeter ElectricMeter { get; set; }
+        public virtual ElectricMeter ElectricMeter { get; set; }
         public string Name { get; set; }
         public string EmployeName { get; set; }
 

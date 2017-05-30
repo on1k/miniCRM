@@ -29,6 +29,8 @@ namespace miniCRM.Web.Infrastructure
         {
             ninjectKernel.Bind<IBaseRepository<Employe>>().To<MainBaseRepository<Employe>>();
             ninjectKernel.Bind<IBaseRepository<Act>>().To<MainBaseRepository<Act>>();
+            ninjectKernel.Bind<IBaseRepository<Company>>().To<MainBaseRepository<Company>>();
+            ninjectKernel.Bind<IBaseRepository<ElectricMeter>>().To<MainBaseRepository<ElectricMeter>>();
         }
     }
 }

@@ -15,3 +15,4 @@ D:\Git\Test\miniCRM\miniCRM.Data\obj\Debug\miniCRM.Data.Migrations.Initial2.reso
 D:\Git\Test\miniCRM\miniCRM.Data\obj\Debug\miniCRM.Data.Migrations.Initial3.resources
 D:\Git\Test\miniCRM\miniCRM.Data\bin\Debug\ru\EntityFramework.SqlServer.resources.dll
 D:\Git\Test\miniCRM\miniCRM.Data\obj\Debug\miniCRM.Data.Migrations.Initial5.resources
+D:\Git\Test\miniCRM\miniCRM.Data\obj\Debug\miniCRM.Data.Migrations.Initial6.resources
