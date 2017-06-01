@@ -55,20 +55,33 @@ namespace miniCRM.Web.Controllers
         }
 
         // GET: Meter/Edit/5
-        public ActionResult Edit(int id)
+        public ActionResult Edit(int? id)
         {
-            return View();
+            var result = dbMeter.GetOne(id);
+            if (result == null)
+            {
+                return View("Index");
+            }
+            
+            return View(result);
         }
 
         // POST: Meter/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(ElectricMeter meter)
         {
             try
             {
                 // TODO: Add update logic here
 
-                return RedirectToAction("Index");
+                if (ModelState.IsValid)
+                {
+                    dbMeter.Edit(meter);
+                    dbMeter.Save();
+                    return RedirectToAction("Index");
+                }
+                return View(meter);
+                
             }
             catch
             {
@@ -77,19 +90,26 @@ namespace miniCRM.Web.Controllers
         }
 
         // GET: Meter/Delete/5
-        public ActionResult Delete(int id)
+        public ActionResult Delete(int? id)
         {
-            return View();
+            var result = dbMeter.GetOne(id);
+            if (result == null)
+            {
+                return View("Index");
+            }
+
+            return View(result);
         }
 
         // POST: Meter/Delete/5
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
+        [HttpPost, ActionName("Delete")]
+        public ActionResult DeleteMeter(ElectricMeter meter)
         {
             try
             {
                 // TODO: Add delete logic here
-
+                dbMeter.Delete(meter);
+                dbMeter.Save();
                 return RedirectToAction("Index");
             }
             catch
@@ -97,5 +117,6 @@ namespace miniCRM.Web.Controllers
                 return View();
             }
         }
+
     }
 }

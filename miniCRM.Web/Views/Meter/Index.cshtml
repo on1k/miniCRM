@@ -22,8 +22,9 @@
                 <td>@item.SerialNumber</td>
                 <td>@item.ExpDate</td>
                 <td>
-                    <a href="@Url.Action("Edit", "Meter")"> <button class="btn btn-primary">Править</button> </a> |
-                    <a href="@Url.Action("Delete", "Meter")"> <button class="btn btn-primary">Удалить</button> </a>
+                    <a href="@Url.Action("Edit", "Meter", new {id = item.ElectricMeterID })"> <button class="btn btn-primary">Править</button> </a> 
+                    <a href="@Url.Action("Delete", "Meter", new {id = item.ElectricMeterID })"> <button class="btn btn-primary">Удалить</button> </a>
+                    
                 </td>
             </tr>
         }

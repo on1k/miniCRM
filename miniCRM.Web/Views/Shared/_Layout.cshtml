@@ -46,7 +46,7 @@
         if (!Modernizr.inputtypes.date) {
             $(function () {
                 $("input[type='date']")
-                    .datepicker({ dateFormat: 'dd/mm/yy', changeYear: true })
+                    .datepicker({ dateFormat: 'dd/mm/yy', changeYear: true, yearRange: "2005:2050" })
                     .get(0).setAttribute("type", "text");
                 });
                 $.datepicker.regional['ru'] = {
