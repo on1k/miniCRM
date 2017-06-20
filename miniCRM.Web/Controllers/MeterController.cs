@@ -15,26 +15,21 @@ namespace miniCRM.Web.Controllers
         {
             dbMeter = repo;
         }
-        // GET: Meter
+        // Выводим список всех счетчиков
         public ActionResult Index()
         {
             var meters = dbMeter.GetAll().OrderByDescending(m => m.ElectricMeterID).Select(s => s);
             return View(meters);
         }
 
-        // GET: Meter/Details/5
-        public ActionResult Details(int id)
-        {
-            return View();
-        }
         [HttpGet]
-        // GET: Meter/Create
+        // GET: Создание нового счетчика
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Meter/Create
+        // POST: Создание нового счетчика
         [HttpPost]
         public ActionResult Create(ElectricMeter meter)
         {
@@ -54,7 +49,7 @@ namespace miniCRM.Web.Controllers
             }
         }
 
-        // GET: Meter/Edit/5
+        // GET: Ищем по id счетчик и передаем в представление
         public ActionResult Edit(int? id)
         {
             var result = dbMeter.GetOne(id);
@@ -66,7 +61,7 @@ namespace miniCRM.Web.Controllers
             return View(result);
         }
 
-        // POST: Meter/Edit/5
+        // POST: Обновляем данные 
         [HttpPost]
         public ActionResult Edit(ElectricMeter meter)
         {
@@ -89,7 +84,7 @@ namespace miniCRM.Web.Controllers
             }
         }
 
-        // GET: Meter/Delete/5
+        // GET: По id передаем объект для удаления
         public ActionResult Delete(int? id)
         {
             var result = dbMeter.GetOne(id);
@@ -101,7 +96,7 @@ namespace miniCRM.Web.Controllers
             return View(result);
         }
 
-        // POST: Meter/Delete/5
+        // POST: Удаление
         [HttpPost, ActionName("Delete")]
         public ActionResult DeleteMeter(ElectricMeter meter)
         {
