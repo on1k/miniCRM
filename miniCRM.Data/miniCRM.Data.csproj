@@ -80,6 +80,14 @@
     <Compile Include="Migrations\201705290612412_Initial6.Designer.cs">
       <DependentUpon>201705290612412_Initial6.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201706131034292_Initial61.cs" />
+    <Compile Include="Migrations\201706131034292_Initial61.Designer.cs">
+      <DependentUpon>201706131034292_Initial61.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706191346020_Init2.cs" />
+    <Compile Include="Migrations\201706191346020_Init2.Designer.cs">
+      <DependentUpon>201706191346020_Init2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="MyMainDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -103,6 +111,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201705290612412_Initial6.resx">
       <DependentUpon>201705290612412_Initial6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706131034292_Initial61.resx">
+      <DependentUpon>201706131034292_Initial61.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706191346020_Init2.resx">
+      <DependentUpon>201706191346020_Init2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

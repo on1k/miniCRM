@@ -12,7 +12,7 @@
         public MyMainDbContext()
             : base("name=MyMainDbContext")
         {
-            //Database.SetInitializer<MyMainDbContext>(new BaseInitializer());
+            Database.SetInitializer<MyMainDbContext>(new BaseInitializer());
         }
 
         public IDbSet<Act> Acts { get; set; }

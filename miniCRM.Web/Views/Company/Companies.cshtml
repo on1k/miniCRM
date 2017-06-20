@@ -21,10 +21,15 @@
                 <td>@item.Name</td>
                 <td>@item.EmployeName</td>
                 <td>@item.ElectricMeter.SerialNumber</td>
-                <td><a href="@Url.Action("Edit", "Company")"> <button class="btn btn-primary">Править</button> </a> | 
-                    <a href="@Url.Action("Delete", "Company")"> <button class="btn btn-primary">Удалить</button> </a> </td>
+                <td><a href="@Url.Action("Edit", "Company", new { id = item.CompanyID })"> <button class="btn btn-primary">Править</button> </a>  
+                    <a href="@Url.Action("Delete", "Company", new { id = item.CompanyID })"> <button class="btn btn-primary">Удалить</button> </a> </td>
             </tr>
         }
     </tboby>
 </table>
 
+<div class="form-group">
+    <div class="col-md-offset-2 col-md-10">
+        <a href="@Url.Action("Create", "Company")"> <button class="btn btn-success">Добавить компанию</button> </a>
+    </div>
+</div>

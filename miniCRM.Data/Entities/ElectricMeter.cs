@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace miniCRM.Data.Entities
 {
@@ -19,5 +20,7 @@ namespace miniCRM.Data.Entities
         [DisplayFormat(DataFormatString ="{0:dd'/'MM'/'yyyy}", ApplyFormatInEditMode = true)]
         [Display(Name = "Дата окончания эксплуатации")]
         public DateTime ExpDate { get; set; }
+
+        
     }
 }
